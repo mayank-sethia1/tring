@@ -3,8 +3,7 @@ import streamlit as st
 
 def get_gemini_key():
     # Prefer Streamlit Secrets; fall back to env vars; accept either name
-    return (
-        or os.getenv("GEMINI_API_KEY")
+    return ( os.getenv("GEMINI_API_KEY")
         or st.secrets.get("GOOGLE_API_KEY")
         or os.getenv("GOOGLE_API_KEY")
     )

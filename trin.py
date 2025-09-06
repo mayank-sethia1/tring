@@ -8,7 +8,7 @@ def get_gemini_key():
     )
 
 API_KEY = (get_gemini_key() or "").strip()
-st.write("Key loaded:", API_KEY)
+st.write("Key loaded:", BOOL(API_KEY))
 if not API_KEY:
     st.error("No API key found. Add GEMINI_API_KEY (or GOOGLE_API_KEY) to Streamlit secrets or env.")
     st.stop()

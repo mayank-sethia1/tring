@@ -1,6 +1,5 @@
 import os
 import streamlit as st
-import google.generativeai as genai
 
 def get_gemini_key():
     # Prefer Streamlit Secrets; fall back to env vars; accept either name
@@ -17,4 +16,3 @@ if not API_KEY:
     st.error("No API key found. Add GEMINI_API_KEY (or GOOGLE_API_KEY) to Streamlit secrets or env.")
     st.stop()
 
-genai.configure(api_key=API_KEY)
